@@ -44,7 +44,7 @@ var json = {
 		}
 	}
 };
-//New Officer
+//New Function JSON Officer
 function jsonAdd(name,age) {
 	var jName = "name1";
 	var jAge = "age1";
@@ -75,8 +75,11 @@ if(users!=null){
 		}
 } else {
 	console.log("No Users");
-}
+};
 //Back
+
+
+
 
 //Boolean
 var admin = new Boolean;
@@ -100,7 +103,7 @@ rank.push("Newbie");
 	while (i<rank.length){
 		console.log(rank[i]);
 		i++;
-		}
+		};
 
 
 //Number
@@ -128,3 +131,12 @@ function closing(value){
 }
 
 closing("I hope everyone is haveing a good week. I know I am excited to say, \"");
+
+
+//New function
+function call(Number){
+var count = Number-1; // 4 users (-1 since the starting count is 0)
+
+console.log(users[count]);
+}
+call(1);
