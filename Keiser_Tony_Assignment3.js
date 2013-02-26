@@ -44,7 +44,19 @@ var json = {
 		}
 	}
 };
+//New Officer
+function jsonAdd(name,age) {
+	var jName = "name1";
+	var jAge = "age1";
+	var newName = name;
+	var newAge = age;
+	json.admins.officer[jName] = newName; 
+	json.admins.officer[jAge] = newAge;
 
+}
+jsonAdd("Vincent", 25);
+ console.log(json);
+ 
 var rank = [ "Owner", "Officers", "Users" ];
 
 //OUTPUT Var
