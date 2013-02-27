@@ -11,8 +11,8 @@ var say = console.log;
 
 function phoneNumber(input){ // Index: 012-345-6789
 	
-	var areaCode = input.substring(0,3);
-	var prefix =  input.substring(3,6);
+	var areaCode   = input.substring(0,3);
+	var prefix     =  input.substring(3,6);
 	var lineNumber = input.substring(6,10);
 	
 		if(input.length<10){
@@ -27,21 +27,52 @@ phoneNumber("1234567890");
 
 function email(input){
 	
-	var start = input.indexOf('@'),
-		end = input.indexOf('.'),
-		at = input.charAt(start),
-		dot = input.charAt(end),
+	var start    = input.indexOf('@'),
+		end      = input.indexOf('.'),
+		at       = input.charAt(start),
+		dot      = input.charAt(end),
 		userName = input.substring(0, start),		
-		siteName = input.substring(start+1,end),
-		domain = input.substring(end+1);
-		
-	    
-
-	   
+		domain   = input.substring(start+1,end),
+		tdl      = input.substring(end+1);
+		 
 		    if(start==-1 || end==-1){
 		  		  say("Invalid format. Format: joe@someone.com")
 		    } else {
-			    say("Your E-mail address is: " + userName + at + siteName + dot + domain);
+			    say("Your E-mail address is: " + userName + at + domain + dot + tdl);
 		    }
 };
 email("joe@someone.com");
+
+//Check URL
+
+function url(input){
+	
+	var format1 = input.substring(0, 7), //http://
+		format2 = input.substring(0, 8); //https://
+		http    = "";
+
+		if(format1=='http://'){
+			http = format1;
+			}
+		if(format2=='https://'){
+			http = format2; 		
+			}
+		if(http!=""){
+		
+				var begin     = input.indexOf('/'),
+					first     = input.indexOf('.'),
+					last      = input.lastIndexOf('.'),
+					dot1      = input.charAt(first),
+					dot2      = input.charAt(last),
+					startSite = input.substring(begin+2,first), //+2 Start past format
+					domain    = input.substring(first+1,last),
+					tdl       = input.substring(last+1);
+					
+				
+					say("Your homepage url is: " + http + startSite + dot1 + domain + dot2 + tdl);
+			
+		} else { 
+			say("Please include 'http://' or 'https://' in url.")	
+		}
+};
+url('http://www.google.com');
