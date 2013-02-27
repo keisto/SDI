@@ -32,7 +32,7 @@ var users = [
 	}
 ];
 		//json data
-var json = {
+var json2 = {
 	"admins": {
 		"owner":{
 			"name": "Mike",
@@ -44,24 +44,27 @@ var json = {
 		}
 	}
 };
+
+
 //New Function JSON Officer
 function jsonAdd(name,age) {
 	var jName = "name1";
 	var jAge = "age1";
 	var newName = name;
 	var newAge = age;
-	json.admins.officer[jName] = newName; 
-	json.admins.officer[jAge] = newAge;
+	json2.admins.officer[jName] = newName; 
+	json2.admins.officer[jAge] = newAge;
 
 }
 jsonAdd("Vincent", 25);
- console.log(json);
+ console.log(json2);
+
  
 var rank = [ "Owner", "Officers", "Users" ];
 
 //OUTPUT Var
 console.log(users);
-console.log(json.admins);
+console.log(json2.admins);
 
 //Condtional
 if(users!=null){
@@ -69,9 +72,9 @@ if(users!=null){
 	for(var i=0;i<users.length;i++)
 	console.log(users[i]);
 		//Nested Condtional
-		if(json.admins!=null){
+		if(json2.admins!=null){
 			console.log("These Users are monitered by these admins: ");
-			console.log(json.admins);
+			console.log(json2.admins);
 		}
 } else {
 	console.log("No Users");
@@ -83,7 +86,7 @@ if(users!=null){
 
 //Boolean
 var admin = new Boolean;
-if(json.admins!=null){
+if(json2.admins!=null){
 	admin = true
 		if(admin==true){
 			console.log("Admins on duty.");
