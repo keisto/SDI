@@ -76,3 +76,24 @@ function url(input){
 		}
 };
 url('http://www.google.com');
+
+//Title-Case String // Split into words (Hope I did something close to what that meant)
+
+function string(quote){
+	var word  = quote.split(' '),
+		words = word.length;
+
+		for (n = 0; n<words; n++){
+			var i     = word[n].charAt(0).toUpperCase(),
+				l     = word[n].substring(1);
+			
+				say(i + l);
+	}	
+}
+string("The world is yours now pumkin.");
+
+
+	
+
+
+
