@@ -128,10 +128,35 @@ function math(cash){
 	
 	say(money);
 	
-}
+};
 math(Math.random()*999); 
 
+//Fuzzy Number 
+
+function fuzzy(guess,maxNumber){
+
+	var number = Math.floor(Math.random()*maxNumber) + 1;	
 	
+	if(number==guess){
+		say('Congratulation! You guessed ' + guess + ', which is correct. ');
+		
+		return;
+		
+	} if(number<guess) { 
+		
+		var theDiff = (number/maxNumber*100)-(guess/maxNumber*100) + '%';
+			
+			say('Actual Number: ' + number + ' | Differance: ' + theDiff + ' | Your Guess: ' + guess);		
+		} else {
+		
+			var theDiff = (number/maxNumber*100)-(guess/maxNumber*100) + '%';
+				
+				say('Actual Number: ' + number + ' | Differance: ' + theDiff + ' | Your Guess: ' + guess);		
+	};	
+};
+fuzzy(50,100);
+
+
 ///////////////////////////////////// END NUMBERS //////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// START ARRAYS ////////////////////////////////////
