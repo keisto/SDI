@@ -144,18 +144,31 @@ function fuzzy(guess,maxNumber){
 		
 	} if(number<guess) { 
 		
-		var theDiff = (number/maxNumber*100)-(guess/maxNumber*100) + '%';
+		var theDiff = Math.floor((number/maxNumber*100)-(guess/maxNumber*100)) + '%';
 			
 			say('Actual Number: ' + number + ' | Differance: ' + theDiff + ' | Your Guess: ' + guess);		
 		} else {
 		
-			var theDiff = (number/maxNumber*100)-(guess/maxNumber*100) + '%';
+			var theDiff = Math.floor((number/maxNumber*100)-(guess/maxNumber*100)) + '%';
 				
 				say('Actual Number: ' + number + ' | Differance: ' + theDiff + ' | Your Guess: ' + guess);		
 	};	
 };
 fuzzy(50,100);
 
+//String to Number 
+
+function input(number,string){
+
+	var string = new String(string);
+	var change = Number(string);
+
+	if(isNaN(change)==false){
+		
+		say(number*string);
+	}	
+}
+input(2,"4");
 
 ///////////////////////////////////// END NUMBERS //////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
