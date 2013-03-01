@@ -82,12 +82,12 @@ url('http://www.google.com');
 function string(quote){
 	var word  = quote.split(' '),
 		words = word.length;
-
+		
 		for (n = 0; n<words; n++){
 			var i     = word[n].charAt(0).toUpperCase(),
 				l     = word[n].substring(1);
-			
-				say(i + l);
+				
+		say(i + l);
 	}	
 }
 string("The world is yours now pumkin.");
@@ -205,6 +205,23 @@ var numbers = [40,100,1,5,25,10];
 	say('Current: ' + value + ' Next: ' + next);
 }
 number(15);
+
+//Add Numbers in Array
+function sum(array){
+	
+	var total = 0
+	 
+		for(i = 0; i<array.length; i++){	
+				value =	array[i];					
+					
+					if(isNaN(value)==false){
+						total+=value;
+						
+				  say(total);
+		}
+	}	
+}
+sum([2, 5,'Hello', 3]);  
 
 
 ///////////////////////////////////// END ARRAYS ////////////////////////////////////
