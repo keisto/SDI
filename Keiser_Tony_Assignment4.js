@@ -170,8 +170,26 @@ function input(number,string){
 }
 input(2,"4");
 
+
+//Find date from date
+
+var today = new Date()
+var day   = 1000*60*60*24 
+var birthday  = new Date(today.getFullYear(), 2, 10) 
+
+	if (today.getMonth()==2 && today.getDate()>10){
+	
+		year.setFullYear(year.getFullYear()+1)
+}		
+		say(Math.ceil((birthday.getTime()-today.getTime())/(day))+
+		" days left until my Birthday!");
+
+
 ///////////////////////////////////// END NUMBERS //////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
+
+
+
 //////////////////////////////////// START ARRAYS ////////////////////////////////////
 
 
