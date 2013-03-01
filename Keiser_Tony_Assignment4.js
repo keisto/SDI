@@ -223,6 +223,17 @@ function sum(array){
 }
 sum([2, 5,'Hello', 3]);  
 
+//Sort Array Object 
+
+function object(object){
+	
+	object.sort(function(obj1, obj2){
+		return obj1.a - obj2.a;
+		});
+
+	say(object);
+}
+object([{a:2},{a:3},{a:1},{a:5},{a:4}]);
 
 ///////////////////////////////////// END ARRAYS ////////////////////////////////////
 
